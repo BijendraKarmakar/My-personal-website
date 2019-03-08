@@ -1,0 +1,1660 @@
+/* ====================
+  Main Styles
+=======================*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Poppins:400,700");
+html, body {
+	height: 100%;
+	font-family: "Montserrat", sans-serif;
+}
+img {
+	max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Montserrat", sans-serif;
+	padding: 0;
+	margin: 0;
+}
+p {
+	font-size: 17px;
+	color: #777777;
+	line-height: 30px;
+	font-family: "Poppins", sans-serif;
+}
+a:hover, a:focus {
+	text-decoration: none;
+	outline: none;
+}
+li, ul {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* ====================
+  Common Styles
+=======================*/
+.pt100 {
+	padding-top: 100px;
+}
+.pb100 {
+	padding-bottom: 100px;
+}
+.mb100 {
+	margin-bottom: 100px;
+}
+.mb70 {
+	margin-bottom: 70px;
+}
+.mb40 {
+	margin-bottom: 40px;
+}
+.mb20 {
+	margin-bottom: 20px;
+}
+.mb10 {
+	margin-bottom: 10px;
+}
+.mt10 {
+	margin-top: 10px;
+}
+.mt25 {
+	margin-top: 25px;
+}
+.nopad {
+	padding-left: 0;
+	padding-right: 0;
+}
+.stitle {
+	text-align: center;
+}
+.stitle h2 {
+	font-family: "Poppins", sans-serif;
+	font-size: 30px;
+	font-weight: 700;
+	text-transform: capitalize;
+	color: #000;
+	position: relative;
+	display: inline-block;
+	padding: 10px 25px;
+}
+.stitle h2:after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	bottom: 0px;
+	left: 0;
+	border-radius: 37px;
+	-webkit-box-shadow: 0px 20px 40px rgba(78, 78, 78, 0.06);
+	        box-shadow: 0px 20px 40px rgba(78, 78, 78, 0.06);
+}
+.site-btn {
+	position: relative;
+	display: inline-block;
+	color: #fff;
+	padding: 14px 40px;
+	border: none;
+	font-family: "Poppins", sans-serif;
+	line-height: normal;
+	text-transform: uppercase;
+	border-radius: 50px;
+	font-size: 12px;
+	letter-spacing: 1px;
+	background: #333;
+}
+.site-btn:hover, .site-btn:focus {
+	outline: none;
+	color: #fff;
+}
+.site-btn.btn-light {
+	background: #fff;
+	color: #333;
+	font-weight: bold;
+}
+.site-btn.btn-light:hover, .site-btn.btn-light:focus {
+	color: #333;
+}
+
+/*------------------
+	Preloder
+--------------------*/
+#preloder {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	background: #f7f7f7;
+}
+.loader {
+	width: 50px;
+	height: 50px;
+	border: 4px solid #000000;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -13px;
+	margin-left: -13px;
+	border-radius: 60px;
+	border-left-color: #fff;
+	-webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+	        box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+	animation: loader 0.8s linear infinite;
+	-webkit-animation: loader 0.8s linear infinite;
+}
+@keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+		        transform: rotate(180deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+@-webkit-keyframes loader {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	50% {
+		-webkit-transform: rotate(180deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+.main-warp {
+	position: relative;
+	z-index: 5;
+	background: #fff;
+}
+.responsive {
+	display: none;
+}
+.header-section {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	background: rgba(255, 255, 255, 0);
+	padding: 15px 50px;
+	-webkit-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+.header-section .logo {
+	display: inline-block;
+	float: left;
+    color: #f63;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 35px;
+    margin-left: 130px;
+    padding-top: 5px;
+    width: 300px;
+}
+.header-section .menu-list {
+	list-style: none;
+	float: right;
+	margin-top: 8px;
+}
+.header-section .menu-list li {
+	display: inline;
+}
+.header-section .menu-list li a {
+	display: inline-block;
+	padding: 10px;
+	color: #a0a0a0;
+	position: relative;
+	font-family: "Poppins", sans-serif;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 0.09em;
+	-webkit-transition: all 0.3s ease 0s;
+	-o-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+}
+.header-section .menu-list li a:hover {
+	color: #fff;
+}
+.header-section .menu-list .current a {
+	color: #fff;
+}
+.header-section.sticky {
+	position: fixed;
+	background: #000;
+	padding: 10px 30px;
+}
+.header-section.sticky .logo img {
+	height: 55px;
+}
+
+
+
+/* ====================
+  Intro Section
+=======================*/
+.intro-section {
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	z-index: 6;
+}
+.intro-bg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: #0a0c17;
+}
+#particles {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 6;
+}
+#round {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.intro-inner {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	display: table;
+}
+.intro-inner .intro-content {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.intro-inner .intro-content img{
+    align-content: center;
+    border: 5px white solid;
+    margin-left: 565px;
+    width: 210px;
+    height: 200px;
+    margin-top: 50px;
+}
+
+.intro-inner .intro-content h2 {
+	font-family: "Poppins", sans-serif;
+	font-size: 35px;
+	font-weight: 300;
+	color: #fff;
+	margin-top: 20px;
+}
+
+.intro-inner .intro-content a{
+    font-family: 'Cinzel Decorative', cursive;
+	font-size: 35px;
+	font-weight: 500;
+	color: #fff;
+	margin-top: 20px;
+}
+
+.intro-inner .intro-content h3 {
+	font-family: "Poppins", sans-serif;
+	font-size: 25px;
+	font-weight: 100;
+	color: #fff;
+	margin-top: 20px;
+}
+
+.typed-cursor {
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+/* ====================
+  About Section
+=======================*/
+
+
+.container .title h2 {
+    font-family: 'Baloo Tammudu', cursive;
+	font-size: 40px;
+	font-weight: 650;
+    text-align: center;
+	color: black;
+    margin-bottom: 100px;
+}
+
+.about-me .personal{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.about-me .profile{
+    text-align: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.about-me img{
+    height: 68px;
+    width: 220px;
+    margin-left: 345px;
+    margin-bottom: 55px;
+    margin-top: -8px;
+}
+
+.about-me a{
+    margin-left: 150px;
+    background-color: #00aced;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.about-me a:hover{
+    background:  #007bb6;
+}
+
+.about-text .first{
+    margin-bottom: 40px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+
+.about-section {
+	position: relative;
+	overflow:hidden;
+    background-color: #e6e9ec;
+}
+.about-top {
+	text-align: center;
+}
+.about-top h2 {
+	font-weight: 400;
+	line-height: 1.3em;
+}
+.about-text h2 {
+	font-size: 30px;
+	margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.about-text p {
+    font-size: 18px;
+    font-family: 'Crimson Text', serif;
+}
+
+.about-me .profile h2{
+    margin-bottom: 42px;
+    text-align: center;
+    margin-left: 15px;
+}
+
+
+.about-me .profile .ques{
+    font-size: 22px;
+    font-family: 'Righteous', cursive;
+    margin-bottom: 0px;
+    text-align: left;
+    margin-left: 75px;
+}
+
+.about-me .profile .ans{
+    margin-top: -30px;
+    font-size: 22px;
+    text-align: left;
+    padding-top: 4px;
+    padding-bottom: 20px;
+    font-weight: 500px;
+    margin-left: 260px;
+    width: 60%;
+}
+
+
+
+/* ====================
+  Skills Section
+=======================*/
+
+
+.container .title2 h2 {
+    font-family: 'Baloo Tammudu', cursive;
+	font-size: 40px;
+	font-weight: 650;
+    text-align: center;
+	color: black;
+    margin-bottom: 20px;
+}
+
+.container .title2 h4 {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 23px;
+    color: black;
+    margin-bottom: 120px;
+}
+
+.container .percentage {
+    width: 1100px;
+    margin-left: 20px;
+    padding-left: 100px;
+    margin-top: 100px;
+}
+
+.contain{
+    padding-bottom: 0px;
+}
+
+.container .one .box {
+    width: 27%;
+    float: left;
+    padding-right: -50px;
+    margin-right: -30px;
+}
+
+.container .one h2{
+    font-size: 24px;
+    text-align: left;
+    margin-top: -20px;
+    margin-bottom: 80px;    
+}
+
+
+.container .one .box .chart {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 40px;
+    margin-right: 0px;
+    margin-left: 0px;
+    text-align: center;
+    font-family: 'Baloo Tammudu', cursive;
+    font-size: 40px;
+    line-height: 180px;   
+    color: #a5b1c2;
+}
+
+.container .one .box canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container .percentage .two{
+    margin-left: 5px;
+    font-size: 25px;
+    font-family: 'Baloo Tammudu', cursive;
+}
+
+.container .percentage .three{
+    margin-left: 25px;
+    font-size: 25px;
+    font-family: 'Baloo Tammudu', cursive;
+}
+
+.container .percentage .four{
+    margin-left: 42px;
+    font-size: 25px;
+    font-family: 'Baloo Tammudu', cursive;
+}
+
+.container .percentage .five{
+    margin-left: 13px;
+    font-size: 25px;
+    font-family: 'Baloo Tammudu', cursive;
+}
+
+.container .percentage .six{
+    margin-left: 35px;
+    font-size: 25px;
+    font-family: 'Baloo Tammudu', cursive;
+}
+
+.container .percentage .seven{
+    margin-left: 60px;
+    font-size: 25px;
+    font-family: 'Baloo Tammudu', cursive;
+}
+
+.container .percentage .eight{
+    margin-left: 40px;
+    font-size: 25px;
+    font-family: 'Baloo Tammudu', cursive;
+}
+
+.container .percentage .nine{
+    margin-left: 14px;
+    font-size: 25px;
+    font-family: 'Baloo Tammudu', cursive;
+}
+
+/* ====================
+  Portfolio Section
+=======================*/
+
+#portfolio {
+    margin-left: 0px;
+    width: 100%;
+    padding: 0px;
+    background-color: #ced6e0;
+    margin-bottom: -100px;    
+}
+
+.portfolio-section .container{
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.portfolio-section h2{
+    padding-left: 0px;
+    text-align: center;
+}
+
+.portfolio-section h4{
+    padding-left: 0px;
+    text-align: center;
+}
+
+.portfolio-section .container .one{
+    position: relative;
+    width: 100%;
+    height: 560px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #eb4d4b;
+}
+
+.portfolio-section .container .two{
+    position: relative;
+    width: 100%;
+    height: 560px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #4267b2;
+}
+
+.portfolio-section .container .three{
+    position: relative;
+    width: 100%;
+    height: 590px;
+    margin: 0px;
+    padding: 0px;
+    background-color:#ced6e0;
+}
+
+.portfolio-section .container .four{
+    position: relative;
+    width: 100%;
+    height: 590px;
+    margin: 0px;
+    padding: 0px;
+    background-color:#008B8B;
+}
+
+.portfolio-section .container .five{
+    position: relative;
+    width: 100%;
+    height: 590px;
+    margin: 0px;
+    padding: 0px;
+    background-color:#2ed573;
+}
+
+.portfolio-section h1{
+    text-align: center;
+    padding-top: 30px;
+    color: black;
+    font-family: 'Crete Round', serif;
+}
+
+.portfolio-section .container .img{
+    padding-top: 60px;
+    width: 580px;
+    padding-left: 45px;
+}
+
+.portfolio-section .container .one img{
+    width: 580px;
+    padding-top: 60px;
+    margin-left: 30px;
+}
+
+.portfolio-section .container .one .first{
+    height: 500px;
+}
+
+.portfolio-section .container .one .second{
+    height: 500px;
+}
+
+
+.portfolio-section .container .one a{
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right:25px;
+    padding-left: 25px;
+    border-radius: 50px;
+    background-color: #17c0eb;
+    margin-left: 225px;
+    font-family: 'Crimson Text', serif;
+}
+
+.portfolio-section .container .one a:hover{
+    background:  #000;
+}
+
+.portfolio-section .container .two a{
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right:25px;
+    padding-left: 25px;
+    border-radius: 50px;
+    background-color:#17c0eb;
+    margin-left: 580px;
+    margin-top: 20px;
+    font-family: 'Crimson Text', serif;
+}
+
+.portfolio-section .container .two a:hover{
+    background:  #000;
+}
+
+.portfolio-section .container .two .adjust{
+    margin-bottom: 27px;
+}
+
+.portfolio-section .container p{
+    text-align: center;
+    color: black;
+    font-size: 19px;
+    padding-top: 22px;
+    margin-bottom: 26px;
+}
+
+.portfolio-section .container .two img{
+    margin-left: 374px;
+    width: 600px;
+    height: 340px;
+    padding: 0px;
+    padding-top: 60px;
+}
+
+.portfolio-section .container .two p{
+    margin-bottom: 50px;
+}
+
+.portfolio-section .container .three img{
+    height: 370px;
+    padding-top: 60px;
+    width: 260px;
+    margin-left: 190px;  
+}
+
+.portfolio-section .container .three a{
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right:25px;
+    padding-left: 25px;
+    border-radius: 50px;
+    background-color: #17c0eb;
+    margin-left: 215px;
+    margin-top: 20px;
+    font-family: 'Crimson Text', serif;
+}
+
+.portfolio-section .container .three a:hover{
+    background:  #000;
+}
+
+.portfolio-section .container .four img{
+    height: 370px;
+    width: 260px;
+    padding-top: 60px;
+    margin-left: 190px;
+}
+
+.portfolio-section .container .four a{
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right:25px;
+    padding-left: 25px;
+    border-radius: 50px;
+    background-color:#17c0eb;
+    margin-left: 225px;
+    margin-top: 20px;
+    font-family: 'Crimson Text', serif;
+}
+
+.portfolio-section .container .four a:hover{
+    background:  #000;
+}
+
+.portfolio-section .container .five img{
+    height: 370px;
+    width: 260px;
+    padding-top: 60px;
+    margin-left: 190px;
+}
+
+.portfolio-section .container .five a{
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right:25px;
+    padding-left: 25px;
+    border-radius: 50px;
+    background-color:#17c0eb;
+    margin-left: 225px;
+    margin-top: 20px;
+    font-family: 'Crimson Text', serif;
+}
+
+.portfolio-section .container .five a:hover{
+    background:  #000;
+}
+
+
+
+/* ====================
+  Promotion Section
+=======================*/
+.promotion-section {
+	position: relative;
+	padding: 150px 0;
+    margin-bottom: -30px;
+    padding-bottom: 0px;
+}
+.promotion-bg {
+	position: absolute;
+	height: 90%;
+	width: 100%;
+	top: 0;
+	left: 0;
+    margin-bottom: 0px;
+	background-image: url("../img/parallex/pexels-photo-1295138.jpeg");
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.promotion h2 {
+	color: #fff;
+    text-align: center;
+    height: 10px;
+    margin-top: -30px;
+    margin-bottom: 200px;
+    padding-bottom: 0px;
+	font-size: 38px;
+    font-family: 'Crimson Text', serif;     
+}
+
+
+
+/* ====================
+  Contact Section
+=======================*/
+
+.contact-section .row .above p{
+    font-size: 15px;
+    text-align: center;
+    margin-left: 0px;
+    color: black;
+}
+
+.contact-section .row .above .icon{
+    font-size: 27px;
+    margin-left: 104px;
+    padding-bottom: 15px;
+}
+
+.contact-section .wrapper{
+    position: relative;
+    margin-top: 50px;
+    width: 600px;
+    height: 500px;
+    margin-left: 270px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+
+.contact-section .wrapper #success{
+    font-size: 16px;
+    margin-bottom: -40px;
+}
+
+.contact-section .wrapper form{
+    padding-top: 20px;
+}
+
+.contact-section .wrapper label{
+    font-family: 'Crimson Text', serif;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 10px;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 15px;
+    padding-left: 20px;
+    color: #666;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.5%;
+}
+
+.input-field input:focus + label,
+.input-field textarea:focus + label,
+.input-field input:valid + label,
+.input-field textarea:valid + label
+{
+    top: -14px;
+    font-size: 14px;
+    padding: 2px 5px;
+    background: #ff006a;
+    color: #fff;
+    border-radius: 4px;
+    padding-left: 20px;
+}
+
+.contact-section .input-field{
+    position: relative;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+}
+
+.contact-section .input-field input,
+.contact-section .input-field textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #666;
+    font-size:  15px;
+    color: #666;
+    font-weight: 700;
+    resize: none;
+}
+
+.contact-section .input-field .btn{
+    margin-top: 5px;
+    background: #ff006a;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: 0.5%;
+    float: right;
+}
+
+.contact-section .input-field .btn:hover{
+    background: #00aced; 
+}
+
+/* ====================
+  Footer Section
+=======================*/
+.footer-section {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background: url("../img/p-dark.png");
+	text-align: center;
+	padding: 70px 0;
+	z-index: 2;
+}
+.footer-section .social-links {
+	margin-bottom: 25px;
+}
+.footer-section .social-links a {
+	display: inline-table;
+	text-align: center;
+	height: 38px;
+	width: 38px;
+	color: #fff;
+	margin: 0 5px;
+}
+.footer-section .social-links a i {
+	display: table-cell;
+	vertical-align: middle;
+}
+.footer-section .social-links a.facebook {
+    font-size: 24px;
+	background: #2D5DA1;
+}
+
+.footer-section .social-links a:hover{
+    background:#130f40;    
+}
+
+.footer-section .social-links a.instagram {
+    font-size: 24px; 
+	background: #ff6b81;
+}
+
+.footer-section .social-links a:hover{
+    background:#130f40;    
+}
+
+.footer-section .social-links a.github {
+    font-size: 24px;    
+	background: #131418;
+}
+
+.footer-section .social-links a:hover{
+    background:#130f40;    
+}
+
+.footer-section .social-links a.stack {
+    font-size: 24px;  
+	background: #f63;
+}
+
+.footer-section .social-links a:hover{
+    background:#130f40;    
+}
+
+.footer-section p {
+	font-size: 15px;
+	margin-bottom: 0;
+	line-height: normal;
+}
+
+
+
+/* Responsive
+==================================================*/
+
+
+/* Large Mobile :480px. */
+@media only screen and (min-width:320px) and (max-width: 480px) {
+	.service-item {
+		margin-bottom: 30px;
+	}
+	.resume-item .resume-left {
+		text-align: left;
+	}
+	.header-section {
+		padding: 0px;
+        width: 104%;
+        padding-top: 10px;
+        overflow: hidden;
+	}
+    
+	.header-section.bgc {
+		background: #000;
+	}
+	
+    .header-section .menu-list {
+		display: none;
+		float: none;
+		clear: both;
+        padding-left: 30px;
+		border-top: 1px solid #222;
+	}
+    
+	.header-section .menu-list li {
+		display: inline;
+	}
+	.header-section .menu-list li a {
+		display: block;
+		padding: 10px;
+	}
+	.header-section .menu-list li a:after {
+		left: 0%;
+	}
+	.header-section .menu-list li a:hover:after {
+		width: 10px;
+		margin-left: 10px;
+	}
+	.header-section .menu-list .current a:after {
+		margin-left: 10px;
+	}
+	.responsive {
+		display: block;
+		color: #fff;
+		font-size: 28px;
+		position: absolute;
+		right: 15px;
+        top: 11px;
+	}
+    
+    body{
+        width: 100%;
+        position: relative;
+    }
+    
+    header h1{
+        padding-left: -10px;
+    }
+    
+    header{
+        margin-left: -15px;
+    }
+    
+    .intro-section{
+        height: 550px;        
+    }
+    
+    .intro-section .intro-inner .intro-content .pro{
+        width: 100%;
+        align-content: center;
+    }
+    
+    .intro-section .intro-inner .intro-content img{
+        width: 140px;
+        height: 140px;
+        margin: 0px;
+        margin-left: 112px;
+        padding: 0px;
+    }
+    
+    .intro-section .intro-inner .intro-content h2{
+        width: 100%;
+        text-align: center;
+        font-size: 19px;
+    }
+    
+    .intro-section .intro-inner .intro-content h2 a{
+        font-size: 21px;
+    }
+    
+    .intro-section .intro-inner .intro-content h3{
+        margin-top: 10px;
+        width: 100%;
+        font-size: 19px;
+    }
+    
+    .container{
+        width: 100%;
+        position: relative;
+    }
+    
+    .about-section{
+        height: 1030px;
+    }
+    
+    .about-section .title h2{
+        font-size: 28px;
+        margin-top: -40px;
+        margin-bottom: 60px;
+    }
+    
+    .about-me a{
+        margin-left: 92px;
+        font-size: 12px;
+        padding-left: 25px;
+        padding-right: 25px;
+        margin-bottom: 100px;
+    }
+    
+    .about-me .personal .first{
+        margin-right: 0px;
+        font-size: 22px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .about-me .personal p{
+        font-size: 16px;
+    }
+    
+    .about-me .personal img{
+        margin-left: 202px;
+        padding: 0px;
+        width: 168px;
+        height: 65px;
+        margin-bottom: 15px;
+        padding-top: 5px;
+    }
+    
+    .about-me .profile .second{
+        margin-left: 0px;
+        font-size: 22px;
+        margin-bottom: 45px;
+        text-align: center;
+    }
+    
+    .about-me .profile .ques{
+        font-size: 16px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        margin-top: -4px;
+    }
+    
+    .about-me .profile .ans{
+        font-size: 16px;
+        margin-left: 130px;
+        margin-bottom: 0px;
+        padding-top: 7px;
+    }
+    
+    .service-section{
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    
+    .service-section .title2 h2{
+        margin-top: -50px;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .service-section .title2 h4{
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+    
+    .service-section .percentage{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        margin-top: 70px;
+        height: 600px;
+    }
+    
+    .service-section .percentage .box{
+        margin: 0px;
+        padding: 0px;
+        width: 180px;
+        margin-left: 65px;
+        height: 230px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .service-section .percentage .box .two{
+        font-size: 18px;
+        padding-left: 19px;
+    }
+    
+    .service-section .percentage .box .three{
+        font-size: 18px;
+        padding-left: 15px;
+    }
+    
+    .service-section .percentage .box .four{
+        font-size: 18px;
+        padding-left: 11px;
+    }
+    
+    .service-section .percentage .box .five{
+        font-size: 18px;
+        padding-left: 15px;
+    }
+    
+    .service-section .percentage .box .six{
+        font-size: 18px;
+        padding-left: 15px;
+    }
+    
+    .service-section .percentage .box .seven{
+        font-size: 18px;
+        padding-left: 0px;
+    }
+    
+    .service-section .percentage .box .eight{
+        font-size: 18px;
+        padding-left: 8px;
+    }
+    
+    .service-section .percentage .box .nine{
+        font-size: 18px;
+        padding-left: 16px;
+    }
+    
+    .portfolio-section .title2 h2, h4{
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+    }
+    
+    .portfolio-section .title2 h2{
+        font-size: 28px;
+        margin-top: -50px;
+        text-align: center;
+    }
+    
+    #portfolio{
+        margin-left: 0px;
+        width: 100%;
+        padding: 0px;
+        
+    }
+    
+    .portfolio-section .container{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    
+    .portfolio-section .title2 h4{
+        font-size: 18px;
+        margin-top: 10px;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    
+    .portfolio-section .port{
+        text-align: center;
+        width: 100%;
+    }
+    
+    .portfolio-section .des{
+        padding: 0px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .portfolio-section .container .one{
+        position:relative;
+        width: 100%;
+        height: 720px;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+    }
+    
+    .portfolio-section .container .one h1{
+        width: 100%;
+        font-size: 21px;
+        padding-top: 20px;
+        text-align: center;
+        margin-bottom: 35px;
+    }
+    
+    .portfolio-section .container .one img{
+        width: 300px;
+        margin: 0px;
+        padding-top: 0px;
+        margin-left: 15px;
+    }
+    
+    .portfolio-section .container .one .second img{
+        margin-top: -30px;
+    }
+    
+    .portfolio-section .container .one p{
+        font-size: 14px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: -20px;
+        margin-bottom: 15px;
+    }
+    
+    .portfolio-section .container .one a{
+        margin-left: 93px;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .portfolio-section .container .one .first{
+        padding-top: 20px;
+        margin-bottom: -110px;    
+    }
+    
+    .portfolio-section .container .two{
+        position:relative;
+        width: 100%;
+        height: 430px;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+    }
+    
+    .portfolio-section .container .two h1{
+        width: 100%;
+        font-size: 21px;
+        text-align: center;
+        margin-top: -10px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    
+    .portfolio-section .container .two img{
+        width: 300px;
+        height: 220px;
+        margin: 0px;
+        margin-top: -10px;
+        margin-left: 30px;
+    }
+    
+    .portfolio-section .container .two a{
+        margin-left: 106px;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
+    
+    .portfolio-section .container .two p{
+        font-size: 14px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 0px;
+    }
+    
+    .portfolio-section .container .three{
+        position:relative;
+        width: 100%;
+        height: 890px;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+    }
+    
+    .portfolio-section .container .three h1{
+        width: 100%;
+        font-size: 21px;
+        margin-top: -10px;
+        text-align: center;
+    }
+    
+    .portfolio-section .container .three img{
+        width: 172px;
+        height: 320px;
+        margin: 0px;
+        padding-top: 70px;
+        margin-left: 81px;
+    }
+    
+    .portfolio-section .container .three a{
+        margin-left: 87px;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .portfolio-section .container .three p{
+        font-size: 14px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: -20px;
+        margin-bottom: 15px;
+    }
+    
+    
+    .portfolio-section .container .four{
+        position:relative;
+        width: 100%;
+        height: 890px;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+    }
+    
+    .portfolio-section .container .four h1{
+        width: 100%;
+        font-size: 21px;
+        margin-top: -10px;
+        text-align: center;
+    }
+    
+    .portfolio-section .container .four img{
+        width: 172px;
+        height: 320px;
+        margin: 0px;
+        padding-top: 70px;
+        margin-left: 81px;
+    }
+    
+    .portfolio-section .container .four a{
+        margin-left: 94px;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .portfolio-section .container .four p{
+        font-size: 14px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: -20px;
+        margin-bottom: 15px;    
+    }
+    
+    
+    .portfolio-section .container .five{
+        position:relative;
+        width: 100%;
+        height: 950px;
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+    }
+    
+    .portfolio-section .container .five h1{
+        width: 100%;
+        font-size: 21px;
+        margin-top: -10px;
+        text-align: center;
+    }
+    
+    .portfolio-section .container .five img{
+        width: 172px;
+        height: 320px;
+        margin: 0px;
+        padding-top: 70px;
+        margin-left: 81px;
+    }
+    
+    .portfolio-section .container .five a{
+        margin-left: 94px;
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .portfolio-section .container .five p{
+        font-size: 14px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: -20px;
+        margin-bottom: 15px;    
+    }
+        
+    .promotion-section h2{
+        font-size: 21px;
+    }
+    
+    .promotion-section .promotion-bg{
+        height: 240px;
+    }
+    
+    .promotion-section .container{
+        height: 140px;
+    }
+    
+    .contact-section{
+        overflow: hidden;
+    }
+    
+    .contact-section .title2 h2{
+        margin-top: -50px;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .contact-section .title2 h4{
+        font-size: 18px;
+        margin-bottom: 70px;
+    }
+    
+    .contact-section .row .phone{
+        width: 30%;
+        padding: 0px;
+    }
+    
+    .contact-section .row .phone .icon{
+        margin-left: 45px;
+        font-size: 23px;
+    }
+     
+    .contact-section .row .phone .number{
+        font-size: 12.5px;
+    }
+    
+    .contact-section .row .location{
+        width: 30%;
+        margin-left: 112px;
+        margin-top: -110px;
+        padding: 0px;
+    }
+    
+    .contact-section .row .location .icon{
+        margin-left: 45px;
+        font-size: 23px;
+    }
+     
+    .contact-section .row .location .place{
+        font-size: 12.5px;
+    }
+    
+    .contact-section .row .email{
+        width: 30%;
+        margin-left: 230px;
+        margin-top: -138px;
+        padding-left: 0px;
+        margin-bottom: 70px;
+    }
+    
+    .contact-section .row .email .icon{
+        margin-left: 42px;
+        font-size: 23px;
+    }
+     
+    .contact-section .row .email .mail{
+        font-size: 12.5px;
+    }
+    
+    .contact-section .container .contact{
+        width: 100%;
+        align-content: center;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .contact-section .container .contact .wrapper{
+        margin: 0px;
+        width: 320px;
+        height: 465px;
+        position: inherit;
+        margin-left: 4px;
+    }
+    
+    .contact-section .container .contact .wrapper form{
+        padding-top: 8px;
+    }
+    
+    .contact-section .container .contact .wrapper .input-field label{
+        font-size: 14px;
+    }
+    
+    .contact-section .container .contact .wrapper .input-field input{
+        font-size: 14px;
+    }
+    
+    .contact-section .container .contact .wrapper .input-field .btn{
+        font-size: 12px;
+    }
+    
+    .footer-section .container p{
+        font-size: 12px;
+    }
+    
+    .footer-section .container .social-links a{
+	    height: 28px;
+	    width: 28px;
+	    color: #fff;
+	    margin: 0 5px;
+    }
+    
+    .footer-section .social-links a.facebook{
+        font-size: 22px;
+    }
+    
+    .footer-section .social-links a.instagram{
+        font-size: 22px;
+    }
+    
+    .footer-section .social-links a.github{
+        font-size: 22px;
+    }
+    
+    .footer-section .social-links a.stack{
+        font-size: 22px;
+    }
+
+}
+
+/* Landscape Mobile :600px. 
+@media only screen and (min-width:600px) and (max-width: 768px) {
+	.intro-inner .intro-content h2 {
+		font-size: 27px;
+	}
+}
+*/

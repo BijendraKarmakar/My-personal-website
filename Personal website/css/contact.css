@@ -1,0 +1,14 @@
+body {
+    min-height: 100%;
+    background:url(../img/p-dark.png) repeat left top;
+
+}
+
+h1{
+    font-size: 34px;
+    color: white;
+    text-align: center;
+    margin-top: 300px;
+    font-weight: 200;
+    font-family: 'Crimson Text', serif;
+}
